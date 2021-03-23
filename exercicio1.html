@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Porgramação em Microinformática -  Exercício 01</title>
+</head>
+<body>
+    <h1>Exercício 01</h1>
+    <p>Solicita várias informações ao usuário e exibe de uma vez.</p>
+
+    <script>
+        let n1 = parseFloat(prompt('Digite o primeiro número: '))
+        let n2 = parseFloat(prompt('Digite o segundo número: '))
+
+        let a = (n1) + (n2)
+        let m = (n1) * (n2)
+        let d = (n1) / (n2)
+        let s = (n1) - (n2)
+        
+        document.write (`<ul> A soma de ${n1} + ${n2} = <b> ${a} </b> </ul>`)
+        document.write (`<ul> A subtração de ${n1} - ${n2} = <b> ${s} </b> </ul>`)
+        document.write (`<ul> A multiplicação de ${n1} * ${n2} = <b> ${m} </b> </ul>`)
+        document.write (`<ul> A divisão de ${n1} / ${n2} = <b> ${d} </b> </ul>`)
+
+
+    </script>
+
+
+</body>
+</html>

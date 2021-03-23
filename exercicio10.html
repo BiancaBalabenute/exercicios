@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Programação em Microinformática - Exercício 10</title>
+</head>
+<body>
+    <h1>Exercício 10</h1>
+    <p>Mostrar a tábuada do numero informado.</p>
+
+    <form id="form">
+        <input id="field1" type="number" placeholder="Informe um número">
+        <button>Mostrar tabuada</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function onSubmit(event) {
+            event.preventDefault()
+
+            let n1 = parseFloat(field1.value)
+
+            field1.className = ''
+            result.innerHTML = ''
+
+            if (isNaN(n1)) {
+                result.innerHTML = '<p>Informe o número que deseja a tabuada</p>'
+                field1.className = 'negative'
+                field1.focus()
+                return
+            }
+
+            for (let i = 0; i <= 10; i++) {
+                let res = n1 * i
+                result.innerHTML += `${n1} * ${i} = ${res} <br>`
+            }
+        }
+
+        form.addEventListener('submit', onSubmit)
+
+    </script>
+</body>
+</html>

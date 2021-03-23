@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Programação em Microinformática - Exercício 04</title>
+</head>
+<body>
+    <h1>Exercício 04 </h1>
+    <p>Solicitar 2 números e exibir o resultado de 4 operações</p>
+
+    <form id="form">
+        <input id="field1" type="number" placeholder="Informe o primeiro numero">
+        <input id="field2" type="number" placeholder="Informe o segundo numero">
+        <button>Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function onSubmit(event) {
+        event.preventDefault()
+
+        let n1 = parseFloat(field1.value)
+        let n2 = parseFloat(field2.value)
+
+        let a = (n1) + (n2)
+        let m = (n1) * (n2)
+        let d = (n1) / (n2)
+        let s = (n1) - (n2)
+
+        result.innerHTML = `
+            <ul>
+            <li> Valor da adição <b>${a}</b>.</li>
+            <li> Valor da multiplicação <b>${m}</b>.</li>
+            <li> Valor da divisão <b>${d}</b>.</li>
+            <li> Valor da subtração <b>${s}</b>.</li>
+            </ul>
+        `
+        }
+
+        form.addEventListener('submit', onSubmit)
+    </script>
+</body>
+</html>

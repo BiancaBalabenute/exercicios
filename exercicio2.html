@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Porgramação em Microinformática -  Exercício 02</title>
+</head>
+<body>
+    <h1>Desconto do produto</h1>
+    <p>Informe o valor do produto e o desconto a ser aplicado. </p>
+    <p> O valor com desconto é: </p>
+
+    <script> 
+        let valor = prompt ('Digite o valor do produto')
+        let desconto = prompt ('Digite o valor do desconto')
+
+        let valor_desconto = (parseFloat(desconto) * parseFloat(valor))/100
+        let valor_final = parseFloat(valor) -  parseFloat(valor_desconto)
+
+        document.write(`<ul>O valor do produto com desconto é: <b>R$ ${valor_final} </b> </ul>
+            <ul>Valor inicial do produto: <b>R$ ${valor} </b></ul>
+            <ul>Valor do desconto: <b>${desconto}% </b></ul>`)
+
+    </script>
+</body>
+</html>

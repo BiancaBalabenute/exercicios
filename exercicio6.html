@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Programação em Microinformática - Exercício 06</title>
+</head>
+<body>
+<h1>Exercício 06</h1>
+<p>Calcular usando a formula de Bhaskara</p>
+
+<form id="form">
+    <input id="n1" type="text" placeholder="Informe o valor de a">
+    <input id="n2" type="text" placeholder="Informe o valor de b">
+    <input id="n3" type="text" placeholder="Informe o valor de c">
+    <button id=button>Calcular</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    function eq(event){
+        event.preventDefault()
+
+        let a = parseFloat(n1.value)
+        let b = parseFloat(n2.value)
+        let c = parseFloat(n3.value)
+        
+        let delta = (b *b) - (4 * a * c)
+
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a)
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a)        
+
+        resultado.innerHTML = `
+        <ul>
+            <li> O valor de x1 é: <b>${x1}</b></li>
+            <li> O valor de x2 é: <b>${x2}</b></li>
+        </ul>
+        `
+    }
+
+    form.addEventListener('submit', eq)
+</script>
+
+
+</body>
+</html>
